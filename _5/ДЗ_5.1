@@ -6,7 +6,6 @@
 </head>
 <body>
 <form action="http://google.com" method="get">
-    <label>
         <h1>Регистрация</h1>
         Ваш логин (email):<br>
         <input type="text" name="login"><br>
@@ -15,16 +14,55 @@
         Информация о себе:<br>
         <textarea name="commetns" cols="30" rows="5"></textarea><br>
         <input type="checkbox" name="checkbox" checked>Подписаться на рассылку
-    </label>
     <br>
-    <label>
         <input type="submit" name="submit" value="Зарегистрироваться">
-    </label>
 </form>
-<form action="http://google.com" method="get">
-    <label>
+<form action="http://www.google.com" method="get">
+        <h1>Профиль</h1>
+            Ваш пол:<input type="radio" name="radio" value="1">Мужской
+            <input type="radio" name="radio" value="2" checked>Женский
+        <br>
+            Месяц и год рождения:<br>
+            <select name="month">
+                <option value="1">Январь</option>
+                <option value="2">Февраль</option>
+                <option value="3">Март</option>
+                <option value="3">Апрель</option>
+                <option value="4">Март</option>
+                <option value="5">Июнь</option>
+                <option value="6">Июль</option>
+                <option value="7">Август</option>
+                <option value="8">Сентябрь</option>
+                <option value="9">Октябрь</option>
+                <option value="10">Ноябрь</option>
+                <option value="11">Декабрь</option>
+            </select>
+            <select name="years">
+                <option value="1">1987</option>
+                <option value="2">1988</option>
+                <option value="3">1989</option>
+                <option value="4" selected>1990</option>
+                <option value="5">1991</option>
+                <option value="6">1992</option>
+                <option value="7">1993</option>
+                <option value="8">1994</option>
+                <option value="9">1995</option>
+                <option value="10">1996</option>
+                <option value="11">1997</option>
+                <option value="12">1998</option>
+                <option value="13">1999</option>
+                <option value="14">2000</option>
+            </select><br>
+            Знакомые технологии:<br>
+    <select name="" size="4" multiple>
+        <option value="1">HTML</option>
+        <option value="2" selected>CSS</option>
+        <option value="3">JavaScript</option>
+        <option value="4">Node.js</option>
+    </select><br>
+    Фото:<input type="file" name="file" value="Choose file" lang="en-us"><br>
+    <input type="submit" value="Сохранить"><br>
 
-    </label>
 </form>
 </body>
 </html>
