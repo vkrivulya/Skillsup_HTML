@@ -1,0 +1,57 @@
+//'use strict';
+/*var Str = "string";
+alert(Str.length);
+ if(Str.length===5){
+   alert("Hellow"+Str);
+ }else if(Str.length===7){
+   alert("Hi"+Str);
+  }else{
+  alert("Ничего не покажем");
+ }
+*/
+/*var Str = "string";
+var NumSrt = "6";
+ if(Str.length==NumSrt){
+  alert("Hellow" +Str);
+  }else if(Str.length===6){
+      alert("Hi"+Str);
+     }else{
+     alert("Ничего не покажем");
+    }*/
+/*var Str = "string";
+var NumSrt = "6";
+ while(Str.length==5){
+  alert("Cool");
+  }*/
+/*var Str = "string";
+var NumSrt = "6";
+ for(var i=0; i<Str.length; i++){
+  alert(Str[i]);
+ }*/
+
+/*var Str = "string";
+var NumSrt = "6";
+ switch(Str.length){
+  case 5:
+   alert("5");
+    break;
+   case 4:
+    alert("4");
+    break;
+   case 6:
+    alert("6");
+    //break;
+   default: 8;
+    alert("default");
+     break;
+ }*/
+/*var Str = "string";
+var NumSrt = 6;
+ NumSrt=Str.toLowerCase();{
+  alert("LowerCase")
+ }*/
+
+var date = "2018-03-02 15:02:01";
+//date.replace("-","");
+//alert(date.replace(/-/g,""));
+alert(date.split("-"));
