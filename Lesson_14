@@ -1,0 +1,43 @@
+/*var data ='{"age":30}'; //данные неполны
+try{
+ var user = JSON.parse(data); // выполняется без ошибок
+ if(!user.name){
+   throw new SyntaxError("Данные некорректны");
+}
+blablabla(); // произошла непредусмотренная ошибка
+    alert(user.name);
+} catch(e){
+  if (e.name == "SyntaxError"){
+   alert("Извините, в данных ошибка");
+  }else{
+  throw e;
+  }
+}*/
+var obj2 ={
+name: "user",
+phone: '+380951234567',
+adress: "Dnipro",
+favoritecolors: ["green","yellow","black"],
+obj: {
+name: "user3",
+phone: '+380501234567',
+adress: "Dnipro1"
+}
+};
+//alert (obj2.favoritecolors[1]);
+
+var copyobj2 = {}; // Создаем новый пустой объект
+for (var key in obj2) {
+if (obj2.hasOwnProperty(key)){
+copyobj2[key]=obj2[key];
+}
+}
+copyobj2.name = "user2";
+alert(obj2.name);
+alert(copyobj2.name);
+alert(copyobj2.adress);
+//alert(copyobj2.favoritecolors[0]);
+for (var i=0; i<copyobj2.favoritecolors.length; i++){
+alert(copyobj2.favoritecolors[i]);
+}
+console.log(copyobj2);
