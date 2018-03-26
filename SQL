@@ -1,0 +1,148 @@
+--Task 4
+DESC departments;
+
+--Task 5
+DESC employees;
+select employee_id, last_name, job_ID, hire_date STARTDATE 
+from employees;
+--Task 6
+
+--Task 7
+SELECT DISTINCT e.job_id
+FROM hr.employees e;
+-- Task 8
+select employee_id AS "EMP #", last_name AS Employee, job_ID AS JOB, hire_date  AS "Hire Date"
+from employees;
+--Task 9 
+SELECT e.last_name || ',' || e.job_id AS "Employee and Title"
+FROM employees e;
+--Task 10
+SELECT e.commission_pct ||  e.employee_id ||','|| e.first_name ||','|| e.last_name ||','||
+e.email ||','|| phone_number ||','|| e.job_id ||','|| e.manager_id ||','||
+e.hire_date ||','|| e.salary ||',,'|| e.department_id AS THE_OUTPUT
+FROM hr.employees e;
+
+/*SELECT employee_id, last_name, department_id, salary, hire_date
+FROM employees
+WHERE  salary >10000 OR salary <=15000 ; */
+
+/*SELECT employee_id, last_name, department_id, salary, hire_date
+FROM employees
+WHERE  salary BETWEEN 10000 AND 15000;*/
+
+SELECT employee_id, last_name, department_id, salary, hire_date, manager_id
+FROM employees
+WHERE  salary >= 10000 AND hire_date >'10-MAR-05';
+--Task 2.01
+SELECT last_name, salary
+FROM employees
+WHERE salary >12000;
+--Task 2.02
+SELECT last_name, department_id
+FROM employees
+WHERE employee_id = 176;
+--Task 2.03
+SELECT last_name, salary
+FROM employees
+WHERE NOT (salary >=5000 AND salary<=12000);
+--Task 2.04
+SELECT last_name, job_id, hire_date
+FROM employees
+WHERE last_name IN('Matos','Taylor')
+ORDER BY hire_date;
+;
+--Task 2.05
+SELECT last_name, department_id
+FROM employees
+WHERE department_id IN(20,50)
+ORDER BY last_name
+;
+--Task 2.06
+SELECT last_name AS "Employee", salary AS "Monthly Salary"
+FROM employees
+WHERE (salary BETWEEN 5000 AND 12000) AND department_id IN(20,50)
+ORDER BY last_name
+;
+--Task 2.07
+SELECT last_name, hire_date
+FROM employees
+WHERE hire_date LIKE '%04'
+ORDER BY last_name
+;
+--Task 2.08
+SELECT last_name, job_id
+FROM employees
+WHERE manager_id IS null
+;
+--Task 2.09
+SELECT last_name, salary, commission_pct
+FROM employees
+WHERE NOT commission_pct IS null
+ORDER BY 2 desc, 3 desc 
+;
+--Task 2.10
+SELECT last_name, salary
+FROM employees
+WHERE salary > &salary_value
+;
+--Task 2.10
+SELECT last_name, salary
+FROM employees
+WHERE salary > &salary_value
+;
+--Task 2.11
+SELECT employee_id, last_name, salary, department_id
+FROM employees
+WHERE manager_id = &enter_manager_id
+ORDER BY &columName
+;
+--Task 2.12
+SELECT last_name
+FROM employees
+WHERE last_name LIKE '__a%'
+ORDER BY last_name
+;
+--Task 2.13
+SELECT last_name
+FROM employees
+WHERE last_name LIKE '%a%' AND last_name LIKE '%e%'
+ORDER BY last_name
+;
+
+SELECT upper('hello s'), lower ('HELLOW S'), initcap('hello class')
+FROM dual;
+
+SELECT SUBSTR('Hello Class!!!',7)
+FROM dual;
+
+SELECT SUBSTR('Hello Class!!!',2)
+FROM dual;
+
+SELECT LENGTH('Hello Class')
+FROM dual;
+
+SELECT INSTR('Hello Class!! Hello World', 'o',6)
+FROM dual;
+
+SELECT LPAD('Hello Class!! Hello World',50,'o')
+FROM dual;
+
+SELECT LPAD(last_name,15, '*')
+FROM employees;
+
+SELECT TRIM('H' from 'Hello Class!! Hello World')
+FROM dual;
+
+SELECT ROUND(45.926, 2),
+      ROUND(45.923, 0),
+      ROUND(45.923,-1)
+FROM dual;
+
+SELECT TRUNC(45.926, 2),
+      TRUNC(45.923, 0),
+      TRUNC(45.923,-1)
+FROM dual;
+
+SELECT MOD(7, 2) --7/2=3,5 --7=3*2+1
+FROM dual;
+
